@@ -6,6 +6,10 @@ class SearchesController < ApplicationController
   end
 
   def show
+    @forecast = ForecastIO.forecast(@search.latitude, @search.longitude).daily.data.first(3)
+    @days = ["Today", "Tomorrow", "Day After Tomorrow"]
+
+    @daily_forecast = @days.zip(@forecast)
   end
 
   def new

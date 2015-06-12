@@ -15,5 +15,18 @@
   <%= @search.longitude %>
 </p>
 
+<strong>Forecast:</strong>
+<ul>
+<% 3.times do |i| %>
+  <li><%= @daily_forecast[i][0] %></li>
+
+  <ul>
+    <li>High: <%= @daily_forecast[i][1].apparentTemperatureMax %></li>
+    <li>Low: <%= @daily_forecast[i][1].apparentTemperatureMin %></li>
+    <li>Low: <%= @daily_forecast[i][1].summary %></li>
+  </ul>
+<% end %>
+</ul>
+
 <%= link_to 'Edit', edit_search_path(@search) %> |
 <%= link_to 'Back', searches_path %>
