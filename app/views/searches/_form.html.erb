@@ -14,18 +14,12 @@
 
   <div class="field">
     <%= f.label :name %><br>
+    <small>(Full or partial address)</small><br />
     <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :latitude %><br>
-    <%= f.text_field :latitude %>
-  </div>
-  <div class="field">
-    <%= f.label :longitude %><br>
-    <%= f.text_field :longitude %>
-  </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit nil, class: 'btn btn-default' %>
   </div>
 <% end %>
 </div>
