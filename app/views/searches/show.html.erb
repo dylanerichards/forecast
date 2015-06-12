@@ -2,11 +2,13 @@
 
 <h1>Forecast for <%= @search.name %></h1>
 
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@search.latitude}%2C#{@search.longitude}", class: "pull-right"%> <br />
 
 <strong>Forecast:</strong>
+
 <ul>
-<% 3.times do |i| %>
-  <li><%= @daily_forecast[i][0] %></li>
+  <% 3.times do |i| %>
+    <li><%= @daily_forecast[i][0] %></li>
 
   <ul>
     <li>High: <%= @daily_forecast[i][1].apparentTemperatureMax %></li>
