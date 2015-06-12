@@ -14,7 +14,7 @@ class SearchesController < ApplicationController
 
   def new
     @searches = Search.all
-    @most_recent = Search.all.limit(5)
+    @most_recent = Search.all.limit(5).reverse
 
     @search = Search.new
   end
