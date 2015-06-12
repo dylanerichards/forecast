@@ -10,11 +10,6 @@ class SearchesController < ApplicationController
     @days = ["Today", "Tomorrow", "Day After Tomorrow"]
 
     @daily_forecast = @days.zip(@forecast)
-
-    @markers = Gmaps4rails.build_markers(@search) do |search, marker|
-      marker.lat search.latitude
-      marker.lng search.longitude
-    end
   end
 
   def new
