@@ -13,6 +13,9 @@ class SearchesController < ApplicationController
   end
 
   def new
+    @searches = Search.all
+    @most_recent = Search.all.limit(5)
+
     @search = Search.new
   end
 
