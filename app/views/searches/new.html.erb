@@ -2,14 +2,12 @@
 
 <%= render 'form' %>
 
-<div class="most-recent">
+<div class="most-recent pull-right">
   <small>Last 5 searches</small>
 
   <ul>
     <% @most_recent.each do |search| %>
-      <li><%= search.name %></li>
+      <li><%= link_to search.name, search %></li>
     <% end %>
   </ul>
 </div>
-
-<%= link_to 'Back', searches_path %>

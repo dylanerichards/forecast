@@ -23,3 +23,4 @@ end
 
 gem 'geocoder'
 gem 'forecast_io'
+gem 'bootstrap-sass', '~> 3.3.4'
