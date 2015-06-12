@@ -24,3 +24,4 @@ end
 gem 'geocoder'
 gem 'forecast_io'
 gem 'bootstrap-sass', '~> 3.3.4'
+gem 'animate.css-rails', '~> 3.2.0'
