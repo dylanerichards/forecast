@@ -9,6 +9,7 @@ class SearchesController < ApplicationController
     forecast = ForecastIO.forecast(@search.latitude, @search.longitude).daily.data.first(3)
     days = ["Today", "Tomorrow", "Day After Tomorrow"]
 
+    @number_of_days = 3
     @daily_forecast = days.zip(forecast)
   end
 
