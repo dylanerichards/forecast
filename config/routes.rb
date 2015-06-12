@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root "locations#new"
-  resources :locations
+  resources :searches
 
+  root "searches#new"
   get 'pages/index'
 end

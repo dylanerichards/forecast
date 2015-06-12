@@ -1,10 +1,10 @@
-<%= form_for(@location) do |f| %>
-  <% if @location.errors.any? %>
+<%= form_for(@search) do |f| %>
+  <% if @search.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@location.errors.count, "error") %> prohibited this location from being saved:</h2>
+      <h2><%= pluralize(@search.errors.count, "error") %> prohibited this search from being saved:</h2>
 
       <ul>
-      <% @location.errors.full_messages.each do |message| %>
+      <% @search.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -17,11 +17,11 @@
   </div>
   <div class="field">
     <%= f.label :latitude %><br>
-    <%= f.number_field :latitude %>
+    <%= f.text_field :latitude %>
   </div>
   <div class="field">
     <%= f.label :longitude %><br>
-    <%= f.number_field :longitude %>
+    <%= f.text_field :longitude %>
   </div>
   <div class="actions">
     <%= f.submit %>
