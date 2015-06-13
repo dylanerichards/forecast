@@ -26,7 +26,9 @@ class SearchesController < ApplicationController
     geocoder = Geocoder.search(params[:search][:name])[0]
     coordinates = geocoder.coordinates
 
-    @search = Search.find_or_create_by(name: params[:search][:name]).tap do |s|
+    name = params[:search][:name].downcase
+
+    @search = Search.find_or_create_by(name).tap do |s|
       s.latitude = coordinates[0]
       s.longitude = coordinates[1]
     end
