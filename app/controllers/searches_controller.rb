@@ -15,7 +15,6 @@ class SearchesController < ApplicationController
 
   def new
     @most_recent = Search.most_recent
-
     @search = Search.new
   end
 
